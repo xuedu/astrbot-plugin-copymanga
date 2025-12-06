@@ -1,0 +1,10 @@
+name: astrbot_plugin_copymanga
+display_name: CopyManga下载器
+description: 用于搜索和下载CopyManga漫画的插件
+author: AstrBot Devs
+version: 1.0.0
+type: official
+repository: https://github.com/AstrBotDevs/copymanga-downloader
+dependencies:
+  - aiohttp
+logo: logo.png

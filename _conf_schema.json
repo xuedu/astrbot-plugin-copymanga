@@ -1,0 +1,294 @@
+{
+  "api_domain": {
+    "type": "string",
+    "description": "CopyManga API域名",
+    "default": "api.copymanga.site",
+    "options": ["api.copymanga.site", "api.copymanga.cn", "api.copymanga.net"]
+  },
+  "custom_api_domain": {
+    "type": "string",
+    "description": "自定义API域名，仅当api_domain_mode为Custom时生效",
+    "default": ""
+  },
+  "api_domain_mode": {
+    "type": "string",
+    "description": "API域名模式",
+    "default": "Default",
+    "options": ["Default", "Custom"]
+  },
+  "download_dir": {
+    "type": "string",
+    "description": "漫画下载目录",
+    "default": "./downloads"
+  },
+  "export_dir": {
+    "type": "string",
+    "description": "漫画导出目录",
+    "default": "./exports"
+  },
+  "token": {
+    "type": "string",
+    "description": "CopyManga登录令牌",
+    "default": "",
+    "obvious_hint": true
+  },
+  "search_limit": {
+    "type": "int",
+    "description": "搜索结果最大返回数量",
+    "default": 20,
+    "minimum": 1,
+    "maximum": 100
+  },
+  "chapter_content_mode": {
+    "type": "string",
+    "description": "章节内容返回方式，merge表示合并转发整章内容，single表示单页发送",
+    "default": "single",
+    "options": ["merge", "single"]
+  },
+  "search_display_limit": {
+    "type": "int",
+    "description": "一次合并转发消息最多显示的漫画数量",
+    "default": 10,
+    "minimum": 1,
+    "maximum": 50
+  },
+  "command_copymanga_login": {
+    "description": "登录命令配置，用于登录CopyManga账号",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_login'",
+            "default": "copymanga_login"
+        }
+    }
+  },
+  "command_copymanga_search": {
+    "description": "搜索命令配置，用于搜索漫画",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_search'",
+            "default": "copymanga_search"
+        }
+    }
+  },
+  "command_copymanga_select_comic": {
+    "description": "选择漫画命令配置，用于选择搜索结果中的漫画",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_select_comic'",
+            "default": "copymanga_select_comic"
+        }
+    }
+  },
+  "command_copymanga_select_chapter": {
+    "description": "选择章节命令配置，用于选择章节阅读",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_select_chapter'",
+            "default": "copymanga_select_chapter"
+        }
+    }
+  },
+
+  "command_copymanga_profile": {
+    "description": "用户信息命令配置，用于获取当前登录用户信息",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_profile'",
+            "default": "copymanga_profile"
+        }
+    }
+  },
+  "command_copymanga_config": {
+    "description": "配置命令配置，用于查看或修改插件配置",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_config'",
+            "default": "copymanga_config"
+        }
+    }
+  },
+  "command_copymanga_test_api": {
+    "description": "测试API命令配置，用于测试API域名连接",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_test_api'",
+            "default": "copymanga_test_api"
+        }
+    }
+  },
+  "command_copymanga_next": {
+    "description": "下一页命令配置，用于查看下一页内容",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_next'",
+            "default": "copymanga_next"
+        }
+    }
+  },
+  "command_copymanga_prev": {
+    "description": "上一页命令配置，用于查看上一页内容",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_prev'",
+            "default": "copymanga_prev"
+        }
+    }
+  },
+  "command_copymanga_jump": {
+    "description": "跳页命令配置，用于跳转到指定页码",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_jump'",
+            "default": "copymanga_jump"
+        }
+    }
+  },
+  "command_copymanga_next_page": {
+    "description": "搜索结果下一页命令配置，用于查看搜索结果的下一页",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_next_page'",
+            "default": "copymanga_next_page"
+        }
+    }
+  },
+  "command_copymanga_prev_page": {
+    "description": "搜索结果上一页命令配置，用于查看搜索结果的上一页",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_prev_page'",
+            "default": "copymanga_prev_page"
+        }
+    }
+  },
+  "command_copymanga_chapter_mode": {
+    "description": "章节模式命令配置，用于切换章节阅读模式 单页为single合并为merge",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_chapter_mode'",
+            "default": "copymanga_chapter_mode"
+        }
+    }
+  },
+  "command_copymanga_help": {
+    "description": "帮助命令配置，用于查看帮助信息",
+    "type": "object",
+    "items": {
+        "enabled": {
+            "description": "是否启用该命令",
+            "type": "bool",
+            "default": true
+        },
+        "command_name": {
+            "description": "命令名称",
+            "type": "string",
+            "hint": "自定义命令名称，例如 'copymanga_help'",
+            "default": "copymanga_help"
+        }
+    }
+  }
+}
