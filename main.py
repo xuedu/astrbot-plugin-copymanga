@@ -15,10 +15,10 @@ from .copymanga_client import CopyMangaClient
 
 @register(
     "copymanga",
-    "AstrBot Devs",
-    "CopyManga 漫画搜索和下载插件",
+    "xuedu",
+    "让你在qq观看漫画",
     "1.0.0",
-    "https://github.com/AstrBotDevs/copymanga-downloader",
+    "https://github.com/xuedu/astrbot-plugin-copymanga/tree/master",
 )
 class CopyMangaPlugin(Star):
     """CopyManga 插件主类"""

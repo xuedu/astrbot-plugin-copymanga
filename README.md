@@ -126,4 +126,4 @@ MIT License
 ## 联系方式
 
 如有问题，请通过以下方式联系：
-- GitHub: https://github.com/AstrBotDevs/copymanga-downloader
+- GitHub: https://github.com/xuedu/astrbot-plugin-copymanga/tree/master
