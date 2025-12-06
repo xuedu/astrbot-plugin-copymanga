@@ -4,7 +4,7 @@ description: 让你在qq观看漫画
 author: xuedu
 version: 1.0.0
 type: official
-repository: https://github.com/xuedu/astrbot-plugin-copymanga/tree/master
+repo: https://github.com/xuedu/astrbot-plugin-copymanga/tree/master
 dependencies:
   - aiohttp
 logo: logo.png
